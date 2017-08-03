@@ -3,7 +3,7 @@
  <div id="events">
  <div class="main-text-body">
      
-    <h2>Самые интересные места отдыха в Краматорске ждут вас!</h2>
+    <h2>Самые интересные события в Краматорске на этой неделе:</h2>
   </div>
   <div class="container-fluid ">
     <div class="content">
@@ -18,7 +18,7 @@
                 <h2><?= $itemx->title; ?></h2>
               </div>
               <div class="event-description">
-               <!-- <p><?= $itemx->description; ?></p> описание события мешает-->
+               <?= $itemx->category_name->category_name; ?>
               </div>
               <div class="event-date">
                 <h3><?= $itemx->date_start; ?></h3>

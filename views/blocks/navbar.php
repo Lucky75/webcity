@@ -15,14 +15,15 @@
                   <span class="icon-bar"></span>
                 </button>
                 <!-- Бренд или название сайта (отображается в левой части меню) -->
-               
+                <div class="col-md-6">
                   <a class="navbar-brand" href="index.php">            
                   <img src="img/logo.png" class="img-responsive" alt="">
                   </a>
+                </div>
               </div>
             <div class="collapse navbar-collapse" id="navbar-main">
                 <!-- Содержимое основной части -->
-               <ol class="nav navbar-nav">         
+                <ol class="nav navbar-nav">         
                   <div class="col-xs-6 col-md-4"> 
                      <div class="form-group">   
                        <div class="btn-group">
