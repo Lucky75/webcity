@@ -1,8 +1,19 @@
 /* Classic style for afisha */
 
+html{
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-    background:url('../img/BG.jpg');
-   padding: 0 !important;
+   margin-bottom: 80px !important; 
+   background-size: cover;
+   color: rgb(0, 0, 0);
+}
+
+body.modal-open {
+    overflow: auto;
+    padding-right: 0px !important;
 }
 
 /*nav*/
@@ -39,6 +50,10 @@ body {
     margin-right: 25px;
     margin-top: 25px;
 }
+
+.btn-group > :first-child.btn {
+    width: 160px;
+}
 .form-group {
 	display: inline-block;
 	margin-bottom: 0px !important;
@@ -69,9 +84,14 @@ body {
 .main-text-body {
     text-align: center;
     margin-bottom: 20px;
-	color: black;
+	color:#3a3939;
 }
 
+.container-about{
+   background-color: white;
+   min-height: 250px;
+   padding: 25px;
+}
 /*изображение шапки*/
 
 #header {
@@ -168,12 +188,12 @@ body {
     position:absolute;
     top:-100%;
     right:0;
-    background:rgba(181, 82, 180, 0.75);
+    background:rgba(255, 255, 255,0.85);
     width:100%;
     height:100%;
     padding:2%;
     text-align:center;
-    color:#fff !important;
+    color:#000 !important;
     z-index:1;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -201,40 +221,18 @@ body {
     opacity: 0;
 }
 
+.label {
+padding: .6em .8em .6em;
+font-size: 100%;
+}
+
 .label-default {
-    background-color: greenyellow !important;
-	color: darkslategray !important;
+    background-color: blue !important;
+	color: white !important;
 }
 
-/*карусель*/
-
-#carousel {
-	background-color:black;
-}
-.carousel {
-    margin-bottom: 0;
-    padding: 0 40px 30px 40px;
-}
-/* Reposition the controls slightly */
-.carousel-control {
-	left: -12px;
-}
-.carousel-control.right {
-	right: -12px;
-}
-/* Changes the position of the indicators */
-.carousel-indicators {
-	right: 50%;
-	top: auto;
-	bottom: 0px;
-	margin-right: -19px;
-}
-/* Changes the colour of the indicators */
-.carousel-indicators li {
-	background: #c0c0c0;
-}
-.carousel-indicators .active {
-background: #333333;
+.event-date {
+    margin-bottom: 25px;
 }
 
 .company-picture {
@@ -279,24 +277,51 @@ background: #333333;
 #footer {
 	background-color:black;
     height: 100px;
-}
-
-
-.share{
-    margin-top: 20px;
+    margin-top: 5px;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    width: 100%;
     text-align: center;
 }
 
+@media (max-width: 920px) {
+  #footer{
+    display: none;
+  }
+}
+.share{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
 .fa {
-    color: #007bb6;
+    color: rgba(136, 245, 235, 1);
+}
+
+.contacts{
+    color: white;
+    margin-top: 5px;
+}
+
+.social {
+    margin-top: 0px;
 }
 
 /* carousel */
+#media {
+    margin-left: 25px;
+}
+.info-des{
+    margin-left: 150px;
+}
 .media-carousel 
 {
   margin-bottom: 0;
   padding: 0 40px 30px 40px;
   margin-top: 30px;
+  height: 300px;
 }
 /* Previous button  */
 .media-carousel .carousel-control.left 
@@ -359,9 +384,9 @@ a:focus{
  /*All company */
 
 .well{
-    background-color:rgba(0,0,0,.0001) !important;
+    background-color:white !important;
     border: none !important;
-    min-height: 150px !important;
+    min-height: 180px !important;
 }
 .picture-media{
     height: 120px;
@@ -397,7 +422,7 @@ a:focus{
  /*card company */
 
 .jumbotron{
-    background-color:rgba(0,0,0,.0001) !important;
+    background-color:white !important;
 }
 
 .details li {
@@ -448,7 +473,7 @@ color: #777; /* Цвет контента описания */
 
 
 /* Main carousel style */
-.slide-event {
+.slide-event img {
     width: 600px;
     height: 400px;
 }
@@ -459,6 +484,9 @@ color: #777; /* Цвет контента описания */
     left: 0;
     margin-left: 5px;
     width: 100%;
+    z-index: 1;
+    position: relative;
+    margin-top: 20px;
 }
 /* Indicators list style */
 .article-slide .carousel-indicators li {
@@ -493,11 +521,11 @@ color: #777; /* Цвет контента описания */
 }
 
 #all-companies {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 }
 
 .btn-succ:hover, .btn-succ:focus, .focus.btn-succ, .btn-succ:active, .active.btn-succ, .open > .btn-succ.dropdown-toggle {
-    background-color:gray !important;
+    background-color:#f2dede !important;
     border: none !important;
 }
 
@@ -505,3 +533,78 @@ color: #777; /* Цвет контента описания */
     background-color:black !important;
     border: none !important;
 }
+
+.btn .caret {
+    margin-left: 5px !important;
+}
+
+/*add_org*/
+
+.Product_Button
+{
+    padding:20px;
+    border:1px solid #fff;
+}
+.margin50{
+    margin-top:50px
+}
+.productbtn:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .productbtn.collapsed:after {
+    content: "\e080";
+  }
+  .width450
+  {
+      width:450px
+  }
+  .margin50 {
+    margin-top:50px;   
+}
+input[type=radio]
+{
+    margin:4px !important;
+}
+.dimentions-width, .dimentions-height
+{
+    width:90%;
+    display:initial;
+}
+
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+.register {
+    margin-bottom: 150px;
+}
+
+.input-group .form-control{
+    z-index: 1 !important;
+}
+
+.fond-logo img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
